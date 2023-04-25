@@ -1,0 +1,27 @@
+function confirmEnding(str, target) {
+  let checkStr = [];
+  let checkTar = [];
+  let counter = 0;
+  
+  for (let i = target.length - 1; i >= 0; i--)
+  {
+    checkTar.push(target[i]);
+  } 
+  for (let j = str.length - 1; j >= str.length - target.length; j--)
+  {
+    checkStr.push(str[j]);
+  }
+  for (let k = 0; k < target.length; k++)
+  {
+    if (checkStr[k] == checkTar[k])
+    {
+      counter++
+    }
+  }
+  if(counter == target.length)
+  return true
+  else 
+  return false
+}
+
+confirmEnding("Bastian", "n");
