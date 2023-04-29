@@ -1,0 +1,14 @@
+function titleCase(str) {
+  const splitCopy = str.split(' ');
+  const outStr = [];
+  for (let i in splitCopy)
+  {
+    outStr[i] = splitCopy[i][0].toUpperCase() + splitCopy[i].slice(1).toLowerCase();
+  }
+
+
+
+  return outStr.join(' ');
+}
+
+titleCase("I'm a little tea pot");

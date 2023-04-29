@@ -1,0 +1,24 @@
+function mutation(arr) {
+
+let counter = 0;
+  for (let i = 0; i < arr[1].length;i++)
+  {
+    if (arr[0].toLowerCase().indexOf(arr[1][i].toLowerCase())>-1)
+    {  
+      counter++;
+      console.log(true)
+    }
+    else console.log(false)
+  }
+  if (counter >= arr[1].length)
+  {
+    return true 
+  }
+  else 
+  {
+    return false
+  }
+
+}
+
+mutation(["Mary", "Army"])

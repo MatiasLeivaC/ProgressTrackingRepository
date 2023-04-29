@@ -1,0 +1,23 @@
+function bouncer(arr) {
+  let newArr = [];
+  let n = 0
+
+for (let i = 0; i < arr.length; i++)
+{
+  if (arr[i])
+  {
+    newArr[i-n] = arr[i];
+  }
+  else 
+  {
+    n++;
+  }
+}
+
+
+
+
+  return newArr;
+}
+
+bouncer([7, "ate", "", false, 9]);
