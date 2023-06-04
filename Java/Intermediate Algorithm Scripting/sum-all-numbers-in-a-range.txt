@@ -1,0 +1,22 @@
+function sumAll(arr) {
+  let output = 0;
+  let n1 = arr[0];
+  let n2 = arr[1];
+  if (n1 > n2)
+  {
+    for (let i = n2; i <= n1;i++)
+    {
+      output += i;
+    }
+  }
+  else 
+  {
+    for (let i = n1; i <= n2;i++)
+    {
+      output += i;
+    }
+  }
+  return output;
+}
+
+sumAll([1, 4]);

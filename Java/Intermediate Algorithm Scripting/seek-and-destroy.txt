@@ -1,0 +1,7 @@
+function destroyer(arr,...argumentsToRemove) {
+
+return arr.filter(index => !argumentsToRemove.includes(index))
+
+
+}
+destroyer([3, 5, 1, 2, 2], 2, 3, 5)
