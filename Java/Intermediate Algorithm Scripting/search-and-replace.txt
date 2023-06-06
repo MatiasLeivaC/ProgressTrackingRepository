@@ -1,0 +1,25 @@
+function myReplace(str, before, after) {
+let output = str.split(" ")
+let caseCheck = before[0]
+if (caseCheck === caseCheck.toUpperCase())
+{
+  after = after.charAt(0).toUpperCase() + after.slice(1);
+}
+else 
+{
+  after = after.charAt(0).toLowerCase() + after.slice(1);
+}
+
+for (let i = 0; i < output.length; i++)
+{
+  if (output[i] == before)
+  {
+    output[i] = after;
+  }
+}
+  output = output.join(" ")
+  console.log(output)
+  return output;
+}
+
+myReplace("Let us go to the store", "store", "mall")
