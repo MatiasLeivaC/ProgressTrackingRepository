@@ -1,0 +1,17 @@
+function fearNotLetter(str) {
+  let checkStr = "abcdefghijklmnopqrstuvwxyz"
+  let j = checkStr.indexOf(str[0])
+  for(let i = 0; i < str.length; i++)
+  {
+    if(checkStr[i+j] != str[i])
+    {
+      return checkStr[i+j]
+    }
+    
+  }
+
+
+  return undefined;
+}
+
+fearNotLetter("abce");

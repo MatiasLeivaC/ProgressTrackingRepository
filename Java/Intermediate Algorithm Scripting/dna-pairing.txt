@@ -1,0 +1,31 @@
+function pairElement(str) {
+  let output = []
+  for (let i = 0; i < str.length; i++)
+  {
+    switch (str[i]){
+      case "A":
+       {
+         output.push(["A","T"])
+         break;
+       }
+       case "T":
+       {
+         output.push(["T","A"])
+         break;
+       }
+       case "C":
+       {
+         output.push(["C","G"])
+         break
+       }
+       case "G":
+       {
+         output.push(["G","C"])
+       }      
+    }   
+  }
+  console.log(output)
+  return output;
+}
+
+pairElement("GCG");
