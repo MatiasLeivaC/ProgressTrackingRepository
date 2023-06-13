@@ -1,0 +1,40 @@
+function smallestCommons(arr) {
+  let firstNum
+  let secondNum
+  if (arr[0]<arr[1])
+  {
+     firstNum = arr[0]
+     secondNum = arr[1]
+  }
+  else
+  {
+     firstNum = arr[1]
+     secondNum = arr[0]
+  }
+
+  for (let i = 1; i >=1; i++)
+  {
+
+    if ((firstNum*i)%secondNum == 0)
+    {
+      for (let j = firstNum; j <= secondNum;j++)
+      {
+
+
+        if ((firstNum*i)%j  != 0)
+        {
+          j = secondNum+10;
+        }
+
+        if (j == secondNum)
+        {
+          console.log("found")
+          return (firstNum*i)
+        }
+      }
+    }
+  }
+
+}
+console.log(smallestCommons([1,13]))
+smallestCommons([1,5]);
