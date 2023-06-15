@@ -1,0 +1,26 @@
+function steamrollArray(arr) {
+let output = []
+const goDeeper = (arr) =>
+{ 
+  for (let i = 0; i < arr.length; i++)
+  {
+    if (Array.isArray(arr[i]))
+    {
+      console.log("go Deeper ")
+      goDeeper(arr[i])
+    }
+    else 
+    {
+      output.push(arr[i])
+    }
+    console.log(output)
+  }
+}
+goDeeper(arr)
+return output
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);
+
+
+[1, [2], [3, [[4]]]]
