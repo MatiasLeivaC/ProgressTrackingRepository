@@ -1,0 +1,48 @@
+const Person = function(firstAndLast) {
+  let fullName = firstAndLast
+  let splitName = fullName.split(" ")
+
+
+  this.getFullName = function() {
+    return fullName;
+  };
+  
+
+  this.getFirstName = function()
+  {
+    return splitName[0]
+  };
+
+
+  this.getLastName = function()
+  {
+    return splitName[1]
+  };
+
+
+  this.setFirstName = function(first)
+  {
+       fullName = first + " " + splitName[1]
+       splitName = fullName.split(" ")
+  };
+  
+  this.setLastName = function(last)
+  {
+       fullName = splitName[0] + " " + last
+       splitName = fullName.split(" ")
+  };
+
+  this.setFullName = function(firstAndLast)
+  {
+       fullName = firstAndLast
+       splitName = fullName.split(" ")
+  };
+
+  
+  return firstAndLast;
+};
+
+const bob = new Person('Bob Ross');
+bob.getFullName();
+bob.setFullName("Haskell Curry")+
+console.log(bob.getLastName())
