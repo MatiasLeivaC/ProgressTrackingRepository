@@ -1,0 +1,21 @@
+function sumFibs(num) {
+  let output = 1;
+  let lastNum = 0;
+  let currNum;
+  for (var i = 1; (i + lastNum) <= num;)
+  {
+
+    currNum = i;
+    i = lastNum + i;
+    lastNum = currNum;
+    console.log(i)
+        if (i%2 != 0)
+      {
+        output = output + i;
+        console.log("sum" + output)
+      }
+  }
+  return output;
+}
+
+sumFibs(4);
