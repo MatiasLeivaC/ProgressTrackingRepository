@@ -1,0 +1,27 @@
+function palindrome(str) {
+  const forwardCheck = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
+  const reverseCheck = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
+  let j = 0;
+  let counter = 0;
+  console.log(forwardCheck)
+  console.log(reverseCheck)
+  for (let i = forwardCheck.length-1; i >= 0;i--)
+  {
+    
+    if (reverseCheck[i] == forwardCheck[j])
+    {
+      counter++
+    }
+    j++
+  }
+  if (counter == forwardCheck.length)
+  {
+    return true;
+  }
+  else 
+  {
+    return false;
+  }
+  
+}
+palindrome("_eye")

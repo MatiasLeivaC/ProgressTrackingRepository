@@ -1,0 +1,91 @@
+function convertToRoman(num) {
+let output = []
+let aux = num
+while (aux >= 1000)
+{
+  output.push("M")
+  aux-=1000
+  console.log(output)
+}
+while (aux >= 900)
+{
+  output.push("CM")
+  aux-=900
+  console.log(output)
+}
+while (aux >= 500)
+{
+  output.push("D")
+  aux-=500
+  console.log(output)
+}
+while (aux >= 400)
+{
+  output.push("CD")
+  aux-=400
+  console.log(output)
+}
+while (aux >= 100)
+{
+  output.push("C")
+  aux-=100
+  console.log(output)
+}
+while (aux >= 90)
+{
+  output.push("XC")
+  aux-=90
+  console.log(output)
+}
+while (aux >= 50)
+{
+  output.push("L")
+  aux-=50
+  console.log(output)
+}
+while (aux >= 40)
+{
+  output.push("XL")
+  aux-=40
+  console.log(output)
+}
+while (aux >= 10)
+{
+  output.push("X")
+  aux-=10
+  console.log(output)
+}
+while (aux >= 9)
+{
+  output.push("IX")
+  aux-=9
+  console.log(output)
+}
+while (aux >= 5)
+{
+  output.push("V")
+  aux-=5
+  console.log(output)
+}
+while (aux >= 4)
+{
+  output.push("IV")
+  aux-=4
+  console.log(output)
+}
+while (aux >= 1)
+{
+  output.push("I")
+  aux-=1
+  console.log(output)
+}
+
+output = output.join("")
+console.log(output)
+
+
+
+ return output;
+}
+
+convertToRoman(36);

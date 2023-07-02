@@ -1,0 +1,22 @@
+function rot13(str) {
+  let output = ""
+  const alphabet  = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  for (let i = 0; i < str.length ;i++)
+  {
+    if (alphabet.includes(str[i]))
+    {
+      let index = alphabet.indexOf(str[i])
+      output  += alphabet[index + 13]
+    }
+    else
+    {
+      output += str[i]
+    }
+
+
+  }
+  console.log(output)
+  return output;
+}
+
+rot13("SERR PBQR PNZC");
